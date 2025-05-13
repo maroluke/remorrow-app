@@ -68,7 +68,7 @@
           <div class="mb-4 md:mb-0">
             <p>&copy; 2024 Remorrow. Alle Rechte vorbehalten.</p>
           </div>
-          <div class="flex space-x-4">
+          <!-- <div class="flex space-x-4">
             <NuxtLink to="/privacy" class="text-gray-300 hover:text-white"
               >Datenschutz</NuxtLink
             >
@@ -78,7 +78,7 @@
             <NuxtLink to="/contact" class="text-gray-300 hover:text-white"
               >Kontakt</NuxtLink
             >
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>

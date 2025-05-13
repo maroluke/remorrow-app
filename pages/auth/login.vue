@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-between">
+        <!-- <div class="flex items-center justify-between">
           <div class="text-sm">
             <NuxtLink
               to="/auth/forgot-password"
@@ -45,7 +45,7 @@
               Passwort vergessen?
             </NuxtLink>
           </div>
-        </div>
+        </div> -->
 
         <div>
           <button

@@ -1,11 +1,14 @@
-const animate = require("tailwindcss-animate");
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: ["class"],
-  safelist: ["dark"],
-  prefix: "",
-
+export default {
+  darkMode: 'class',
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './app.vue',
+    './error.vue'
+  ],
   theme: {
     container: {
       center: true,
@@ -58,20 +61,20 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
         "collapsible-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-collapsible-content-height)" },
         },
         "collapsible-up": {
           from: { height: "var(--radix-collapsible-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -82,5 +85,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
-};
+  plugins: [],
+}

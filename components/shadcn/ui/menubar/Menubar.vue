@@ -1,23 +1,25 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 import {
   MenubarRoot,
   type MenubarRootEmits,
   type MenubarRootProps,
   useForwardPropsEmits,
-} from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+} from "radix-vue";
+import type { HTMLAttributes } from "vue";
 
-const props = defineProps<MenubarRootProps & { class?: HTMLAttributes['class'] }>()
-const emits = defineEmits<MenubarRootEmits>()
+const props = defineProps<
+  MenubarRootProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<MenubarRootEmits>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -26,7 +28,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="
       cn(
         'flex h-10 items-center gap-x-1 rounded-md border bg-background p-1',
-        props.class,
+        props.class
       )
     "
   >
